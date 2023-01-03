@@ -1,5 +1,7 @@
-import { useState } from 'react'
-import './App.css'
+
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import "./App.css";
 
 import Cart from './assets/components/pages/cart/Cart'
 import Category from './assets/components/pages/category/Category'
@@ -8,7 +10,7 @@ import Menu from './assets/components/pages/menu/Menu'
 import Productdetail from './assets/components/pages/productdetail/Productdetail'
 
 function App() {
-  const [count, setCount] = useState(0)
+	const [count, setCount] = useState(0);
 
   return (
     <>
@@ -18,7 +20,8 @@ function App() {
 <Menu />
 <Category />
  </>
+
   )
 }
 
-export default App
+export default App;

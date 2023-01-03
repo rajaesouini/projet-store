@@ -10,8 +10,10 @@ const Productdetail = () => {
 
 
     return (
+<>
         <Head />
-    )
+        <p>productdetail</p>
+        </>    )
 };
 
 

@@ -1,10 +1,13 @@
 import Head from "../../head/Head";
 
 const Home = () => {
- 
+
 
     return (
-        <Head />
+      <>
+      <Head />
+      <p>head</p>
+      </>
     )
 };
 

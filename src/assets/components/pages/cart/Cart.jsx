@@ -8,7 +8,6 @@ const Cart = () => {
 
     return (
         <>
-
         <Head />
         <p>cart</p>
         </>

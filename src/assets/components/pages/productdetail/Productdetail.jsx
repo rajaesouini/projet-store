@@ -1,5 +1,6 @@
 
 import Head from "../../head/Head";
+import Product from "../../product/Product";
 
 
 const Productdetail = () => {
@@ -13,6 +14,7 @@ const Productdetail = () => {
 <>
         <Head />
         <p>productdetail</p>
+        <Product />
         </>    )
 };
 

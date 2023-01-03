@@ -32,4 +32,7 @@
     row-gap: 15px;
 }
 
-section {align-items: center;}
+section {
+
+    align-items: center;
+}

@@ -8,7 +8,10 @@ const Category = () => {
 
 
     return (
+      <>
         <Head />
+        <p>Category</p>
+        </>
     )
 
 };

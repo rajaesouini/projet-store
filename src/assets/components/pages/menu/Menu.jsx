@@ -8,7 +8,10 @@ const Menu = () => {
 
 
     return (
-        <Head />
+      <>
+      <Head />
+      <p>menu</p>
+      </>
     )
 
 };

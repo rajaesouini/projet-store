@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#imgpd {
+    border: 1px solid;
+    width: 600px;
+    height: 450px;
+}
+
+section {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+#ligne1 {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#category {
+    border: 1px solid;
+    width: 600px;
+    height: 50px;
+}
+
+button {
+
+    border: 1px solid;
+    width: 600px;
+    height: 50px;
+
+}

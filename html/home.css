@@ -1,0 +1,29 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.bordimg
+{
+    border: 1px solid;
+    width: 150px;
+    height: 100px;
+}
+
+.prod{
+    display: flex;
+    border: 1px solid;
+    width: 800px;
+    height: 150px;
+    justify-content: space-between;
+}
+
+.list-prod
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+

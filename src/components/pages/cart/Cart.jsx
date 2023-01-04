@@ -1,5 +1,7 @@
 import Head from "../../head/Head";
 
+import cart from "./cart.css";
+
 const Cart = () => {
 	return (
 		<>

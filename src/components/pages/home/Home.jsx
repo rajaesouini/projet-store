@@ -1,5 +1,6 @@
 import Head from "../../head/Head";
 import Product from "../../product/Product";
+import home from "./home.css";
 
 const Home = () => {
 	return (

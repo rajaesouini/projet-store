@@ -1,13 +1,14 @@
-const Product = () => {
-  return(
-    <>
-      <p>title</p>
-      <p>price</p>
-      <p>description</p>
-      <p>image</p>
-      <p>category</p>
-    </>
-  );
+const Product = ({value}) => {
+  // console.log(value);
+	// fetch("https://fakestoreapi.com/products")
+	// 	.then((res) => res.json())
+	// 	.then((json) => {
+
+	// 		for (let i = 0; i < json.length; i++) {
+	// 			console.log(json);
+	// 		}
+	// 	});
+	return <p>{ value.title }</p>;
 };
 
 export default Product;

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Head from "../../head/Head";
 import Product from "../../product/Product";
+import { Link } from "react-router-dom";
+
 
 const Home = () => {
 
@@ -19,7 +21,6 @@ const Home = () => {
     // récupérer et filtrer la réponse
     const response = await request.json();
     // console.log(response);
-
     // renvoyer la réponse sous forme de promesse
     return response;
   }

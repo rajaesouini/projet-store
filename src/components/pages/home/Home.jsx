@@ -5,9 +5,9 @@ import home from "./home.css";
 const Home = () => {
 	return (
 		<>
-		<section class="list-prod">
+		<section className="list-prod">
 			{<article class="prod">
-				<img src="" alt="" class="bordimg" />
+				<img src="" alt="" className="bordimg" />
 				<div><h2>Product</h2><p>Brand</p></div>
 				<p>prix</p>
 			</article>

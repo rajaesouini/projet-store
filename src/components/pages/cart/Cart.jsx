@@ -7,8 +7,8 @@ const Cart = () => {
 		<>
 		<section>
 			<h2>My cart</h2>
-			{<article class="prod">
-				<img src="" alt="" class="bordimg" />
+			{<article className="prod">
+				<img src="" alt="" className="bordimg" />
 				<div><h2>Product</h2></div>
 				<p>prix</p>
 			</article>

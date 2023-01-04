@@ -13,16 +13,7 @@ import router from "./services/Router";
 function App() {
 	const [count, setCount] = useState(0);
 
-	return (
-		<>
-		<RouterProvider router={router} />
-		<Home />
-		<Productdetail />
-		<Cart />
-		<Menu />
-		<Category />
-		</>
-	);
+	return <><RouterProvider router={router} /></>;
 }
 
 export default App;

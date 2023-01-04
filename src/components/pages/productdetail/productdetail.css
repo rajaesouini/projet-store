@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
 }
 
 #imgpd {
@@ -22,15 +23,19 @@ section {
 
 
 #ligne1 {
+    width: 100%;
     display: flex;
     justify-content: space-between;
 
 }
 
 #category {
+    display: flex;
     border: 1px solid;
-    width: 600px;
+    width: 100%;
     height: 50px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 button {

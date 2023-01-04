@@ -12,12 +12,12 @@ const Productdetail = () => {
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed hic totam ipsum quae enim sapiente, iusto, nostrum dicta repellendus provident deleniti voluptatem reprehenderit, incidunt fugit rem nulla. Voluptatum, quos vel!
 			</p>
 			<div id="category">
-				<p>Category</p> 
+				<p>Category</p>
 				<div>
-					<span class="material-symbols-outlined">star</span>
-					<span class="material-symbols-outlined">star</span>
-					<span class="material-symbols-outlined">star</span>
-					<span class="material-symbols-outlined">star</span>
+					<span className="material-symbols-outlined">star</span>
+					<span className="material-symbols-outlined">star</span>
+					<span className="material-symbols-outlined">star</span>
+					<span className="material-symbols-outlined">star</span>
 				</div>
 			</div>
 			<button>Add to cart</button>

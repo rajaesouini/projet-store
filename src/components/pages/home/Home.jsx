@@ -6,7 +6,7 @@ const Home = () => {
 	return (
 		<>
 		<section className="list-prod">
-			{<article class="prod">
+			{<article className="prod">
 				<img src="" alt="" className="bordimg" />
 				<div><h2>Product</h2><p>Brand</p></div>
 				<p>prix</p>

@@ -1,13 +1,13 @@
-const Product = () => {
-  return(
-    <>
-      <p>title</p>
-      <p>price</p>
-      <p>description</p>
-      <p>image</p>
-      <p>category</p>
-    </>
-  );
-};
+const Product = ({value}) => {
+		return(
+		<>
+			<p>{value.title}</p>
+			<p>{value.description}</p>
+			<p>{value.image}</p>
+			<p>{value.price}</p>
+			<p>{value.category}</p>
+		</>)
+	}; 
+
 
 export default Product;

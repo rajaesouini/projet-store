@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* align horizontal et verticale */
+  align-items: center;
+  min-height: 100vh;
+  background: gold;
+  width: 100%;
+  justify-content: center;
+  /* margin-left: 15%; */
+}
+
+section > h1{
+    margin: 10px 20px;
+}
+
+section > nav > ul > li > a{
+    text-decoration: none;
+    color: white;
+}
+
+.toto{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    /* width: 400px;
+    font-family: sans-serif; */
+    list-style: none;
+    /* justify-content: space-around; */
+}

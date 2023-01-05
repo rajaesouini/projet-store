@@ -32,7 +32,7 @@ const Category = () => {
     <Head />
     {
       categoryData.map((value, index) => {
-        return <Product key={index} value={value} />
+        return <Product key={value.id} value={value} />
       })
     }
     

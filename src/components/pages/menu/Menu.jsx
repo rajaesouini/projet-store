@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Product from "../../product/Product";
 import Head from "../../head/Head";
+import { Link } from "react-router-dom";
+
 
 
 const Menu = () => {
@@ -28,11 +30,12 @@ const Menu = () => {
 
     return (
       <>
-      <Head />
+        <Head />
         {
-          productsData.map((value) => {
+          productsData.map((value, index) => {
             // return <Product key={index} value={value} />
-            return <p>{value}</p>
+            // return <p>{value} {index}</p>
+            return <Link to={ `/category/${value}` }>{ value }</Link>
 
           })
         }

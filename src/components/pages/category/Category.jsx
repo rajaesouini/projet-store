@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 import Head from "../../head/Head";
 import Product from "../../product/Product";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const Category = () => {
-	const [productsData, setProductsData] = useState([]);
+	const { name } = useParams();
 
+	const [productsData, setProductsData] = useState([]);
 	const fetchProducts = async () => {
 		const requestInfos = new Request(
-			"https://fakestoreapi.com/products/category/jewelery",
+			`https://fakestoreapi.com/products/category/${name}`,
 			{
 				method: "get",
 			},
@@ -28,8 +29,8 @@ const Category = () => {
 	return (
 		<>
 		<Head />
-		{productsData.map((value, index) => {
-			return <Product key={index} value={value} />;
+		{productsData.map((value) => {
+			return <Product value={value} />;
 		})}
 		</>
 	);

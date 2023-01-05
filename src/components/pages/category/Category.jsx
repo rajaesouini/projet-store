@@ -1,16 +1,18 @@
 import { useEffect, useState } from "react";
 import Head from "../../head/Head";
 import Product from "../../product/Product";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 
 const Category = () => {
+
+  const {name } = useParams();
 
   const [productsData, setProductsData ] = useState([]);
 
   const fetchProducts = async () => {
 
-    const requestInfos = new Request ('https://fakestoreapi.com/products/category/jewelery', {
+    const requestInfos = new Request (`https://fakestoreapi.com/products/category/${name}`, {
       method: 'get'
     });
 
@@ -27,11 +29,6 @@ const Category = () => {
 
 
 
-  const fetchCategory = async () => {
-
-    const requestInfos = new Request('https://fakestoreapi.com/products', {
-      method: 'get'
-  });
 
     return (
       <>
@@ -44,7 +41,7 @@ const Category = () => {
       </>
     )
 
-      }
+
 };
 
 

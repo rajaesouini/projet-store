@@ -7,7 +7,7 @@ const Product = ({value}) => {
 			<p>{value.price}</p>
 			<p>{value.category}</p>
 		</>)
-	}; 
+	};
 
 
 export default Product;

@@ -3,47 +3,37 @@ import Head from "../../head/Head";
 import Product from "../../product/Product";
 import { Link, useParams } from "react-router-dom";
 
-
 const Category = () => {
+	const { name } = useParams();
 
-  const {name } = useParams();
+	const [productsData, setProductsData] = useState([]);
+	const fetchProducts = async () => {
+		const requestInfos = new Request(
+			`https://fakestoreapi.com/products/category/${name}`,
+			{
+				method: "get",
+			},
+		);
 
-  const [productsData, setProductsData ] = useState([]);
+		const request = await fetch(requestInfos);
 
-  const fetchProducts = async () => {
+		const response = await request.json();
 
-    const requestInfos = new Request (`https://fakestoreapi.com/products/category/${name}`, {
-      method: 'get'
-    });
+		return response;
+	};
 
-    const request = await fetch(requestInfos);
+	useEffect(() => {
+		fetchProducts().then((data) => setProductsData(data));
+	});
 
-    const response = await request.json();
-
-    return response;
-  }
-
-  useEffect(() => {
-    fetchProducts().then( data => setProductsData(data));
-  })
-
-
-
-
-    return (
-      <>
-      <Head />
-        {
-          productsData.map( (value, index) => {
-            return <Product key={index} value={value} />
-          } )
-        }
-      </>
-    )
-
-
+	return (
+		<>
+		<Head />
+		{productsData.map((value) => {
+			return <Product value={value} />;
+		})}
+		</>
+	);
 };
 
-
-
-export default Category
+export default Category;

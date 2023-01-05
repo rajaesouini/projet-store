@@ -4,48 +4,33 @@ import Product from "../../product/Product";
 import { Link } from "react-router-dom";
 
 
-
 const Productdetail = () => {
-
-  const [productsData, setProductsData ] = useState([]);
-
-  const fetchProducts = async () => {
-
-    const requestInfos = new Request ('https://fakestoreapi.com/products/category/jewelery', {
-      method: 'get'
-    });
-
-    const request = await fetch(requestInfos);
-
-    const response = await request.json();
-
-    return response;
-  }
-
-  useEffect(() => {
-    fetchProducts().then( data => setProductsData(data));
-  })
+	const [productdetailData, setProductdetailData] = useState({});
 
 
+	const fetchProductdetail = async () => {
+		const requestInfos = new Request("https://fakestoreapi.com/products/1", {
+			method: "get",
+		});
 
-    return (
-      <>
-      <Head />
-        {
-          productsData.map( (value, index) => {
-            return <Product key={index} value={value} />
-          } )
-        }
-      </>
-    )
+		const request = await fetch(requestInfos);
 
+		const response = await request.json();
+
+		return response;
+	};
+
+	useEffect(() => {
+		fetchProductdetail().then((data) => setProductdetailData(data));
+	}, []);
+
+
+	return (
+		<>
+			<Head />
+			<Product value={productdetailData} />
+		</>
+	);
 };
 
-
-
-
-
-
-
-
-export default Productdetail
+export default Productdetail;

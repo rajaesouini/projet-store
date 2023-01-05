@@ -27,6 +27,12 @@ const Category = () => {
 
 
 
+  const fetchCategory = async () => {
+
+    const requestInfos = new Request('https://fakestoreapi.com/products', {
+      method: 'get'
+  });
+
     return (
       <>
       <Head />
@@ -37,6 +43,7 @@ const Category = () => {
         }
       </>
     )
+
 
 };
 

@@ -33,20 +33,28 @@ const Home = () => {
 	return (
 		<>
 		<Head />
-		{productsData.map((value, index) => {
-			return <Product key={index} value={value} />;
-		})}
+		<section className="list-prod">
+			{productsData.map((value) => {
+				// return <Product key={index} value={value} />
+				return (
+					<article className="prod">
+						<img src={value.image} alt="" className="bordimg" />
+						<div><h2>{value.title}</h2><p>Brand</p></div>
+						<p>{value.price}€</p>
+					</article>
+				);
+			})}
+		</section>
 		</>
 	);
-
-	{
-		/* <section className="list-prod">
-{<article className="prod">
-	<img src="" alt="" className="bordimg" />
-	<div><h2>Product</h2><p>Brand</p></div>
-	<p>prix</p>
-</article>*/
-	}
+	// 	{
+	// 		/* <section className="list-prod">
+	// {<article className="prod">
+	// 	<img src="" alt="" className="bordimg" />
+	// 	<div><h2>{value.title}</h2><p>Brand</p></div>
+	// 	<p>{value.price}</p>
+	// </article>*/
+	// 	}
 };
 
 export default Home;

@@ -1,3 +1,4 @@
+import { useAsyncValue } from "react-router-dom";
 import Head from "../../head/Head";
 
 import cart from "./cart.css";

@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.bordimg
+{
+    border: 1px solid;
+    width: 150px;
+    height: 100px;
+}
+
+.prod{
+    display: flex;
+    /* border: 1px solid; */
+    width: 800px;
+    height: 150px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px 100px / 120px;
+    /* border-radius: 30px;     */
+    background: rgb(189, 187, 187);
+    margin-top: 50px;
+}
+
+hr
+{
+    margin-top: 30px;
+    width: 800px;
+}
+
+#droite
+{
+    text-align: right;
+    width: 800px;
+}
+
+section{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}

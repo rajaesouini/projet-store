@@ -4,9 +4,6 @@ import Head from "../../head/Head";
 const Menu = () => {
 
 
-
-
-
     return (
       <>
       <Head />
@@ -15,12 +12,6 @@ const Menu = () => {
     )
 
 };
-
-
-
-
-
-
 
 
 

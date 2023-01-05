@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
 
   // créer un état stockant les données de l'api
-  const [ productsData, setProductsData ] = useState([]); 
+  const [ productsData, setProductsData ] = useState([]);
 
   const fetchProducts = async () => {
     // configuration de la requête HTTP
@@ -30,7 +30,7 @@ const Home = () => {
 				fetchProducts().then( data => setProductsData(data) );
 
   }, [])
-  
+
 
 
 	return (

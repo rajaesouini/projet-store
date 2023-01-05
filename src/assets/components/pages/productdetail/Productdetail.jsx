@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import Head from "../../head/Head";
 import Product from "../../product/Product";
+import { Link } from "react-router-dom";
+
 
 const Productdetail = () => {
 	const [productdetailData, setProductdetailData] = useState({});
+
 
 	const fetchProductdetail = async () => {
 		const requestInfos = new Request("https://fakestoreapi.com/products/1", {
@@ -20,6 +23,7 @@ const Productdetail = () => {
 	useEffect(() => {
 		fetchProductdetail().then((data) => setProductdetailData(data));
 	}, []);
+
 
 	return (
 		<>

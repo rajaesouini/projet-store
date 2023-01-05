@@ -1,13 +1,31 @@
 import { useEffect, useState } from "react";
 import Head from "../../head/Head";
 import Product from "../../product/Product";
-
+import { Link } from "react-router-dom";
 
 
 const Category = () => {
 
-  
-  const [ categoryData, setCategoryData] = useState([])
+  const [productsData, setProductsData ] = useState([]);
+
+  const fetchProducts = async () => {
+
+    const requestInfos = new Request ('https://fakestoreapi.com/products/category/jewelery', {
+      method: 'get'
+    });
+
+    const request = await fetch(requestInfos);
+
+    const response = await request.json();
+
+    return response;
+  }
+
+  useEffect(() => {
+    fetchProducts().then( data => setProductsData(data));
+  })
+
+
 
   const fetchCategory = async () => {
 
@@ -15,32 +33,19 @@ const Category = () => {
       method: 'get'
   });
 
-  const request = await fetch(requestInfos);
+    return (
+      <>
+      <Head />
+        {
+          productsData.map( (value, index) => {
+            return <Product key={index} value={value} />
+          } )
+        }
+      </>
+    )
 
-  const response = await request.json();
-
-  return response;
-}
-
-   useEffect(() => {
-   fetchCategory().then( data => setCategoryData(data));
-    }, [] )
-
-
-    return ( <>
-    <p>Electronics</p>
-    <Head />
-    {
-      categoryData.map((value, index) => {
-        return <Product key={index} value={value} />
-      })
-    }
-    
-    </>);
 
 };
-
-
 
 
 

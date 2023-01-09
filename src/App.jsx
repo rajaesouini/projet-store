@@ -1,9 +1,20 @@
 import "./App.css";
 import { RouterProvider } from "react-router-dom";
-import router from "./services/Router";
+import router from "./assets/services/Router";
+import { TitleContextProvider } from "./assets/components/context/TitleContextProvider";
 
 function App() {
-	return <><RouterProvider router={router} /></>;
+	const [count, setCount] = useState("");
+
+	return (
+		<>
+			<TitleContextProvider>
+				{/* <Cart />  */}
+				<RouterProvider router={router} />
+			</TitleContextProvider>
+		</>
+	);
+
 }
 
 export default App;
